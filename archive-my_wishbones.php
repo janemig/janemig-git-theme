@@ -17,6 +17,7 @@ Template Name: Archive-My_Wishbones
 				<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
 					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 						<?php the_post_thumbnail(array(150, 150)); // Declare pixel size you need inside the array ?>
+						<?php echo do_shortcode("[gallery]"); ?>
 					</a>
 				<?php endif; ?>
 				<!-- /Post Thumbnail -->
@@ -31,6 +32,10 @@ Template Name: Archive-My_Wishbones
 <h2>No wishbone paintings to display</h2>	
 <?php endif; ?>
 </div><!--/content-->
+
+	<script type="text/javascript" charset="utf-8">
+		Shadowbox.init();
+	</script>
 
 
 <?php get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>

@@ -37,5 +37,8 @@
 			<p>single-my_wishbones.php</p>
 		</div><!--/content-->
 
-
+		<script type="text/javascript" charset="utf-8">
+			Shadowbox.init();
+		</script>
+		
 <?php get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
