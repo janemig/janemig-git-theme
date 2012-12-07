@@ -50,7 +50,7 @@
 	    add_image_size('large', 700, '', true); // Large Thumbnail
 	    add_image_size('medium', 250, '', true); // Medium Thumbnail
 	    add_image_size('small', 120, '', true); // Small Thumbnail
-	    add_image_size('custom-size', 700, 400, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
+	    add_image_size('custom-size', 700, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
 	
 		register_nav_menus( array(
 			'top_menu' => __( 'Top Menu' ),
@@ -241,7 +241,7 @@
 
 	// Register the Clouds custom post type
 	
-	// start custom post type code
+	// start custom post type code: Wishbones
 
 	function custom_wishbones_init() {
 	  $labels = array(
@@ -274,6 +274,149 @@
 	add_action( 'init', 'custom_wishbones_init');
 	
 	// end custom post type code
+	
+	//Another one:
+	// start custom post type code: Clouds
+
+	function custom_clouds_init() {
+	  $labels = array(
+	    'name' => _x('Clouds', 'post type general name', 'your_text_domain'),
+	    'singular_name' => _x('Cloud', 'post type singular name', 'your_text_domain'),
+	    'add_new' => _x('Add New', 'clouds', 'your_text_domain'),
+	    'add_new_item' => __('Add New Clouds Painting', 'your_text_domain'),
+	    'edit_item' => __('Edit Clouds Painting', 'your_text_domain'),
+	    'new_item' => __('New Clouds Painting', 'your_text_domain'),
+	    'all_items' => __('All Clouds', 'your_text_domain'),
+	    'view_item' => __('View Clouds Painting', 'your_text_domain'),
+	  );
+	  $args = array(
+	    'labels' => $labels,
+	    'public' => true,
+	    'publicly_queryable' => true,
+	    'show_ui' => true, 
+	    'show_in_menu' => true, 
+	    'query_var' => true,
+	    'rewrite' => array( 'slug' => _x( 'clouds', 'URL slug', 'your_text_domain' ) ),
+	    'capability_type' => 'post',
+	    'has_archive' => true, 
+	    'hierarchical' => false,
+	    'menu_position' => null,
+	    'supports' => array( 'title', 'thumbnail', 'editor', 'excerpt', 'custom-fields' )
+	  ); 
+	  register_post_type('my_clouds', $args);
+	}
+	// happens every time somebody hits wordpress
+	add_action( 'init', 'custom_clouds_init');
+	
+	// end custom post type code
+	
+	//Another one:
+	// start custom post type code: Portraits
+
+	function custom_portraits_init() {
+	  $labels = array(
+	    'name' => _x('Portraits', 'post type general name', 'your_text_domain'),
+	    'singular_name' => _x('Portrait', 'post type singular name', 'your_text_domain'),
+	    'add_new' => _x('Add New', 'portraits', 'your_text_domain'),
+	    'add_new_item' => __('Add New Portrait Painting', 'your_text_domain'),
+	    'edit_item' => __('Edit Portrait Painting', 'your_text_domain'),
+	    'new_item' => __('New Portrait Painting', 'your_text_domain'),
+	    'all_items' => __('All Portraits', 'your_text_domain'),
+	    'view_item' => __('View Portrait Painting', 'your_text_domain'),
+	  );
+	  $args = array(
+	    'labels' => $labels,
+	    'public' => true,
+	    'publicly_queryable' => true,
+	    'show_ui' => true, 
+	    'show_in_menu' => true, 
+	    'query_var' => true,
+	    'rewrite' => array( 'slug' => _x( 'portraits', 'URL slug', 'your_text_domain' ) ),
+	    'capability_type' => 'post',
+	    'has_archive' => true, 
+	    'hierarchical' => false,
+	    'menu_position' => null,
+	    'supports' => array( 'title', 'thumbnail', 'editor', 'excerpt', 'custom-fields' )
+	  ); 
+	  register_post_type('my_portraits', $args);
+	}
+	// happens every time somebody hits wordpress
+	add_action( 'init', 'custom_portraits_init');
+	
+	// end custom post type code
+	
+	//Another one:
+	// start custom post type code: Flowers
+
+	function custom_flowers_init() {
+	  $labels = array(
+	    'name' => _x('Flowers', 'post type general name', 'your_text_domain'),
+	    'singular_name' => _x('Flower', 'post type singular name', 'your_text_domain'),
+	    'add_new' => _x('Add New', 'flowers', 'your_text_domain'),
+	    'add_new_item' => __('Add New Flower Painting', 'your_text_domain'),
+	    'edit_item' => __('Edit Flower Painting', 'your_text_domain'),
+	    'new_item' => __('New Flower Painting', 'your_text_domain'),
+	    'all_items' => __('All Flowers', 'your_text_domain'),
+	    'view_item' => __('View Flower Painting', 'your_text_domain'),
+	  );
+	  $args = array(
+	    'labels' => $labels,
+	    'public' => true,
+	    'publicly_queryable' => true,
+	    'show_ui' => true, 
+	    'show_in_menu' => true, 
+	    'query_var' => true,
+	    'rewrite' => array( 'slug' => _x( 'flowers', 'URL slug', 'your_text_domain' ) ),
+	    'capability_type' => 'post',
+	    'has_archive' => true, 
+	    'hierarchical' => false,
+	    'menu_position' => null,
+	    'supports' => array( 'title', 'thumbnail', 'editor', 'excerpt', 'custom-fields' )
+	  ); 
+	  register_post_type('my_flowers', $args);
+	}
+	// happens every time somebody hits wordpress
+	add_action( 'init', 'custom_flowers_init');
+	
+	// end custom post type code
+	
+	//Another one:
+	// start custom post type code: Flowers
+
+	function custom_portraits_animals_init() {
+	  $labels = array(
+	    'name' => _x('Portraits: Animals', 'post type general name', 'your_text_domain'),
+	    'singular_name' => _x('Portrait: Animal', 'post type singular name', 'your_text_domain'),
+	    'add_new' => _x('Add New', 'portrait_animal', 'your_text_domain'),
+	    'add_new_item' => __('Add New Portrait: Animal', 'your_text_domain'),
+	    'edit_item' => __('Edit Portrait: Animal', 'your_text_domain'),
+	    'new_item' => __('New Portrait: Animal', 'your_text_domain'),
+	    'all_items' => __('All Portraits: Animals', 'your_text_domain'),
+	    'view_item' => __('View Portrait: Animal', 'your_text_domain'),
+	  );
+	  $args = array(
+	    'labels' => $labels,
+	    'public' => true,
+	    'publicly_queryable' => true,
+	    'show_ui' => true, 
+	    'show_in_menu' => true, 
+	    'query_var' => true,
+	    'rewrite' => array( 'slug' => _x( 'portraits_animals', 'URL slug', 'your_text_domain' ) ),
+	    'capability_type' => 'post',
+	    'has_archive' => true, 
+	    'hierarchical' => false,
+	    'menu_position' => null,
+	    'supports' => array( 'title', 'thumbnail', 'editor', 'excerpt', 'custom-fields' )
+	  ); 
+	  register_post_type('my_portraits_animals', $args);
+	}
+	// happens every time somebody hits wordpress
+	add_action( 'init', 'custom_portraits_animals_init');
+	
+	// end custom post type code
+	
+	
+	
 	
 
 		//Another one:

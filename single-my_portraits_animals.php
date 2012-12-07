@@ -1,6 +1,6 @@
 <?php
 /*
- * The Template for displaying all single posts
+Template: Single-My_Portraits_Animals
  
  */
 ?>
@@ -22,7 +22,7 @@
 
 			<?php endwhile; ?>
 			
-			<p>single-my_wishbones.php</p>
+			<p>single-my_portraits_animals.php</p>
 		</div><!--/content-->
 
 		<script type="text/javascript" charset="utf-8">
